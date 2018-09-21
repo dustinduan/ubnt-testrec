@@ -24,7 +24,11 @@ def log_index(startnum=0,endnum=4):
         return(set(s))
 
 machine=log_index()
-mo=log_index(4,16)
+mm=input("请输入需要查询的工单的号码，如果按回车会默认查询所有工单:")
+if len(mm)==12:
+    mo=mm
+else:
+    mo=log_index(4,16)
 station=log_index(16,19)
 status=log_index(19,23)
 while True:
