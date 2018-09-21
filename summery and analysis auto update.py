@@ -38,6 +38,7 @@ while True:
                                 s.append(eachline[23:42])
                     k=set(s)
                     n=len(k)
-                    print(x,y,z,n)
+                    if n>0:
+                        print(x,y,z,n)
         time.sleep(30)
         clean_screen()

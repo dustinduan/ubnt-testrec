@@ -36,7 +36,8 @@ for x in mo:
                         s.append(eachline[23:42])
             k=set(s)
             n=len(k)
-            print(x,y,z,n)
+            if n>0:
+                print(x,y,z,n)
 n=input()
 for x in mo:
     for y in station:
