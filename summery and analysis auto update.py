@@ -2,6 +2,13 @@ import platform as pl
 import os
 import time
 
+def alie_check(mo):
+    with open('alive.txt','r') as source:
+        for eachline in source:
+            if mo in eachline:
+                return(True)
+    return(0)
+
 def clean_screen():
     if 'Windows' in pl.platform():
         os.system("cls")
@@ -38,7 +45,7 @@ while True:
                                 s.append(eachline[23:42])
                     k=set(s)
                     n=len(k)
-                    if n>0:
+                    if n>0 and alie_check(x)==True:
                         print(x,y,z,n)
         time.sleep(30)
         clean_screen()
